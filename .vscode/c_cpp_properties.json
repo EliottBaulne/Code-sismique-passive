@@ -2,20 +2,22 @@
   "configurations": [
     {
       "name": "ESP-IDF workspace",
-      "compilerPath": "gcc",
-      "compileCommands": "${config:idf.buildPath}/compile_commands.json",
       "intelliSenseMode": "${default}",
       "includePath": [
+        "${config:idf.espIdfPath}/components/**",
+        "${config:idf.espIdfPathWin}/components/**",
         "${workspaceFolder}/**"
       ],
       "browse": {
         "path": [
+          "${config:idf.espIdfPath}/components",
+          "${config:idf.espIdfPathWin}/components",
           "${workspaceFolder}"
         ],
-        "limitSymbolsToIncludedHeaders": true
+        "limitSymbolsToIncludedHeaders": false
       },
-      "cStandard": "${default}",
-      "cppStandard": "${default}"
+      "cStandard": "c11",
+      "cppStandard": "c++17"
     }
   ],
   "version": 4

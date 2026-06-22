@@ -20,6 +20,13 @@ The repository uses `${workspaceFolder}` and VS Code settings variables for
 paths. Local installation paths such as `C:\esp\...` or `/home/<user>/...`
 should stay in your personal VS Code/user settings, not in the repository.
 
+The checked-in `.vscode/c_cpp_properties.json` intentionally does not set
+`compilerPath` or `compileCommands`. Those values depend on the ESP-IDF version,
+target chip, and local toolchain path. After the ESP-IDF project files are
+present, run `ESP-IDF: Run idf.py reconfigure task` or `idf.py reconfigure` to
+generate `build/compile_commands.json` locally if you want VS Code to use compile
+commands for IntelliSense.
+
 ## Notes for this upload
 
 At the time of this setup, the repository only contains README and VS Code
