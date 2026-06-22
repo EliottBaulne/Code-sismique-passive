@@ -1,10 +1,10 @@
 {
   "configurations": [
     {
-      "name": "ESP-IDF",
-      "compilerPath": "${default}",
+      "name": "windows-gcc-x64",
+      "compilerPath": "gcc",
       "compileCommands": "${config:idf.buildPath}/compile_commands.json",
-      "intelliSenseMode": "gcc-x86",
+      "intelliSenseMode": "windows-gcc-x64",
       "includePath": [
         "${workspaceFolder}/**"
       ],
@@ -13,7 +13,9 @@
           "${workspaceFolder}"
         ],
         "limitSymbolsToIncludedHeaders": true
-      }
+      },
+      "cStandard": "${default}",
+      "cppStandard": "${default}"
     }
   ],
   "version": 4
